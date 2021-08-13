@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,CAAC,CAAC;EACA,UAAU,EAAE,UAAU;CACvB;;AAED,AAAA,IAAI,CAAC;EACC,gBAAgB,EAAE,OAAO;CAC9B",
+    "sources": [
+        "../html/BEM_part_11.08/css/index.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}
