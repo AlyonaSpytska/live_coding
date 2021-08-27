@@ -69,7 +69,7 @@ console.log(result);
 //callback function
 // input acc(number), number, index (optional), array (optional)
 //output number (sting)
-//return обязаьелен*
+//return обязателен*
 
 const transactions = [5, 3, 8, 10, -4];
 
@@ -82,3 +82,4 @@ const sum = transactions.reduce((acc, element, index) => {
 }, 0);
 
 console.log(sum);
+
