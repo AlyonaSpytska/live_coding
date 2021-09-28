@@ -157,59 +157,82 @@
 // const res  =users.filter(age => age > 18);
 // console.log(res.length);
 
-let a = { name: "Samantha"}
-let b = a;
-b.name = "Sara"
-console.log(b); //result { name: "Sara"}
-console.log(a);//result { name: "Sara"}
+// let a = { name: "Samantha"}
+// let b = a;
+// b.name = "Sara"
+// console.log(b); //result { name: "Sara"}
+// console.log(a);//result { name: "Sara"}
 
 
-let y = "John";   // y is a string
-let x = + y;      // x is a number (NaN)
+// let y = "John";   // y is a string
+// let x = + y;      // x is a number (NaN)
 
-let y = "5";      // y is a string
-let x = + y;      // x is a number
+// let y1 = "5";      // y is a string
+// let x2 = + y;      // x is a number
 
-Number("3.14")    // returns 3.14
-Number(" ")       // returns 0
-Number("")        // returns 0
-Number("99 88")   // returns NaN
+// Number("3.14")    // returns 3.14
+// Number(" ")       // returns 0
+// Number("")        // returns 0
+// Number("99 88")   // returns NaN
 
-false
-undefined
-null
-NaN
-0
-"" (empty 'string')
+// false
+// undefined
+// null
+// NaN
+// 0
+// "" (empty string)
 
-const value = 'string';
+// const value = 'string';
 
-!value; // false
+// !value; // false
 
-!!value; // true
+// !!value; // true
 
-function doSomething(first, second, ...rest) {
-    console.log(first); // Первый аргумент
-    console.log(second); // Второй аргумент
-    console.log(rest[0]); // Третий аргумент
-    console.log(rest[1]); // Четвертый
-    // Etc.
-}
+// function doSomething(first, second, ...rest) {
+//     console.log(first); // Первый аргумент
+//     console.log(second); // Второй аргумент
+//     console.log(rest[0]); // Третий аргумент
+//     console.log(rest[1]); // Четвертый
+//     // Etc.
+// }
 
-let doSomething = (...rest) => {
-    rest[0]; // Доступ к первому аргументу
+// let doSomething = (...rest) => {
+//     rest[0]; // Доступ к первому аргументу
+// };
+
+// let doSomething = () => {
+//     arguments[0]; // У стрелочных функций нет аргументов
+// };
+
+// numObj.toPrecision([precision])
+
+// var str = 'Быть или не быть вот в чём вопрос.';
+
+// console.log(str.includes('Быть'));       // true
+// console.log(str.includes('вопрос'));    // true
+// console.log(str.includes('несуществующий')); // false
+// console.log(str.includes('Быть', 1));    // false
+// console.log(str.includes('БЫТЬ'));       // false
+
+// myCar.make = "Ford";
+// myCar["make"] = "Ford";
+let person = {
+  firstName: "John",
+  lastName: "Doe",
+  address: {
+    street: "North 1st street",
+    city: "San Jose",
+    state: "CA",
+    country: "USA",
+  },
 };
 
-let doSomething = () => {
-    arguments[0]; // У стрелочных функций нет аргументов
-};
+let copiedPerson = Object.assign({}, person);
 
-numObj.toPrecision([precision])
+copiedPerson.firstName = "Jane"; // disconnected
 
-var str = 'Быть или не быть вот в чём вопрос.';
+copiedPerson.address.street = "Amphitheatre Parkway"; // connected
+copiedPerson.address.city = "Mountain View"; // connected
 
-console.log(str.includes('Быть'));       // true
-console.log(str.includes('вопрос'));    // true
-console.log(str.includes('несуществующий')); // false
-console.log(str.includes('Быть', 1));    // false
-console.log(str.includes('БЫТЬ'));       // false
+console.log(copiedPerson);
+console.log(person);
